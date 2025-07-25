@@ -122,7 +122,8 @@ const generateCertificates = useCallback(async () => {
       formData.append('date', date);
       formData.append('bgImage', backgroundImage.file); // ✅ added uploaded image
 
-      const response = await fetch('http://localhost:5000/generate-certificate', {
+     const response = await fetch('https://certificate-backend-production.up.railway.app/generate-certificate', {
+
         method: 'POST',
         body: formData,
       });
