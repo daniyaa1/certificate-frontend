@@ -122,8 +122,12 @@ const generateCertificates = useCallback(async () => {
       formData.append('date', date);
       formData.append('bgImage', backgroundImage.file); // ✅ added uploaded image
 
-     const response = await fetch('https://certificate-backend-production.up.railway.app/generate-certificate', {
+      // Use local backend during development (localhost) and the deployed backend in production
+      const backendBase = window.location.hostname.includes('localhost') || window.location.hostname.includes('127.0.0.1')
+        ? 'http://localhost:5051'
+        : 'https://certificate-backend-production.up.railway.app';
 
+      const response = await fetch(`${backendBase}/generate-certificate`, {
         method: 'POST',
         body: formData,
       });
@@ -228,11 +232,11 @@ const downloadAllPdfs = useCallback(() => {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="image-upload">Certificate Background</Label>
+                <Label htmlFor="image-upload">Certificate Background (PNG or JPG)</Label>
                 <Input
                   id="image-upload"
                   type="file"
-                  accept="image/*"
+                  accept="image/png, image/jpeg"
                   ref={imageInputRef}
                   onChange={handleImageUpload}
                 />
