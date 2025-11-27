@@ -4,9 +4,7 @@ This is the frontend for the Certificate Generator web app. It allows users to u
 
 ---
 
-## 🌐 Live App
-
-🖥️ Try it here: [certificate-frontend-eight.vercel.app](https://certificate-frontend-eight.vercel.app/)
+## 🌐 Live App : https://certificate-frontend-pk6u.vercel.app/
 
 ---
 
