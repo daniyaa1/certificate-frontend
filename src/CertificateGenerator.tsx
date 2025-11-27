@@ -125,7 +125,7 @@ const generateCertificates = useCallback(async () => {
       // Use local backend during development (localhost) and the deployed backend in production
       const backendBase = window.location.hostname.includes('localhost') || window.location.hostname.includes('127.0.0.1')
         ? 'http://localhost:5051'
-        : 'https://certificate-backend-production.up.railway.app';
+        : process.env.REACT_APP_BACKEND_URL || 'https://certificate-backend-production-231d.up.railway.app';
 
       const response = await fetch(`${backendBase}/generate-certificate`, {
         method: 'POST',
