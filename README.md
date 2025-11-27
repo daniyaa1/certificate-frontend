@@ -4,9 +4,7 @@ This is the frontend for the Certificate Generator web app. It allows users to u
 
 ---
 
-## 🌐 Live App
-
-🖥️ Try it here: [certificate-frontend-eight.vercel.app](https://certificate-frontend-eight.vercel.app/)
+## 🌐 Live App : https://certificate-frontend-pk6u.vercel.app/
 
 ---
 
@@ -32,9 +30,7 @@ This is the frontend for the Certificate Generator web app. It allows users to u
 
 ## 🔗 Backend API Integration
 
-This frontend connects to the deployed backend:
-
-👉 [certificate-backend-production.up.railway.app](https://certificate-backend-production.up.railway.app)
+This frontend connects to the deployed backend.
 
 Make sure CORS is enabled on backend to allow communication.
 
@@ -42,11 +38,11 @@ Make sure CORS is enabled on backend to allow communication.
 
 ## 🧪 Usage Instructions
 
-1. Open the [Live App](https://certificate-frontend-eight.vercel.app/)
+1. Open the [Live App](https://certificate-frontend-pk6u.vercel.app/)
 2. Upload your certificate background image (JPG/PNG).
 3. Upload a CSV file with student data (Name, Course, Date).
 4. Click on **Generate Certificates**.
-5. A ZIP file will automatically download containing all personalized certificates in PDF format.
+5. Individual PDF certificates will be generated and downloaded for each student.
 
 ---
 
